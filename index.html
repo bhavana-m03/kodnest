@@ -3,103 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KodNest Premium Build System</title>
+    <title>Job Notification Tracker - KodNest</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Top Bar -->
-    <header class="top-bar">
-        <div class="top-bar__project">Project Alpha</div>
-        <div class="top-bar__progress">Step 1 / 5</div>
-        <div class="top-bar__status">
-            <span class="status-badge status-badge--in-progress">In Progress</span>
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <div class="top-nav__container">
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="top-nav__links" id="navLinks">
+                <li><a href="#/dashboard" class="top-nav__link" data-route="dashboard">Dashboard</a></li>
+                <li><a href="#/saved" class="top-nav__link" data-route="saved">Saved</a></li>
+                <li><a href="#/digest" class="top-nav__link" data-route="digest">Digest</a></li>
+                <li><a href="#/settings" class="top-nav__link" data-route="settings">Settings</a></li>
+                <li><a href="#/proof" class="top-nav__link" data-route="proof">Proof</a></li>
+            </ul>
         </div>
-    </header>
+    </nav>
 
-    <!-- Context Header -->
-    <section class="context-header">
-        <h1 class="context-header__title">Define your product requirements</h1>
-        <p class="context-header__subtitle">Describe what you're building and who it's for</p>
-    </section>
-
-    <!-- Main Layout -->
-    <main class="main-layout">
-        <!-- Primary Workspace -->
-        <div class="primary-workspace">
-            <div class="card">
-                <h2 class="card__title">Product Details</h2>
-                <div class="form-group">
-                    <label class="form-label">Product Name</label>
-                    <input type="text" class="form-input" placeholder="Enter product name">
-                </div>
-                <div class="form-group">
-                    <label class="form-label">Description</label>
-                    <textarea class="form-textarea" rows="6" placeholder="Describe your product"></textarea>
-                </div>
-                <div class="button-group">
-                    <button class="button button--primary">Continue</button>
-                    <button class="button button--secondary">Save Draft</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Secondary Panel -->
-        <aside class="secondary-panel">
-            <div class="panel-section">
-                <h3 class="panel-section__title">What to do</h3>
-                <p class="panel-section__text">Provide clear details about what you're building. Focus on the core problem and solution.</p>
-            </div>
-
-            <div class="panel-section">
-                <div class="prompt-box">
-                    <div class="prompt-box__header">
-                        <span class="prompt-box__label">Prompt</span>
-                        <button class="button-icon" aria-label="Copy">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <rect x="5" y="5" width="9" height="9" stroke="currentColor" stroke-width="1.5"/>
-                                <path d="M3 11V3H11" stroke="currentColor" stroke-width="1.5"/>
-                            </svg>
-                        </button>
-                    </div>
-                    <p class="prompt-box__content">Build a landing page for a SaaS product with hero section, features, and pricing.</p>
-                </div>
-            </div>
-
-            <div class="panel-section">
-                <button class="button button--secondary button--full">Copy Prompt</button>
-                <button class="button button--secondary button--full">Build in Lovable</button>
-                <button class="button button--success button--full">It Worked</button>
-                <button class="button button--warning button--full">Report Error</button>
-                <button class="button button--secondary button--full">Add Screenshot</button>
-            </div>
-        </aside>
+    <!-- Main Content -->
+    <main class="app-content" id="appContent">
+        <!-- Route content will be injected here -->
     </main>
 
-    <!-- Proof Footer -->
-    <footer class="proof-footer">
-        <div class="proof-footer__content">
-            <div class="checklist">
-                <label class="checklist-item">
-                    <input type="checkbox" class="checklist-item__checkbox">
-                    <span class="checklist-item__label">UI Built</span>
-                </label>
-                <label class="checklist-item">
-                    <input type="checkbox" class="checklist-item__checkbox">
-                    <span class="checklist-item__label">Logic Working</span>
-                </label>
-                <label class="checklist-item">
-                    <input type="checkbox" class="checklist-item__checkbox">
-                    <span class="checklist-item__label">Test Passed</span>
-                </label>
-                <label class="checklist-item">
-                    <input type="checkbox" class="checklist-item__checkbox">
-                    <span class="checklist-item__label">Deployed</span>
-                </label>
-            </div>
-        </div>
-    </footer>
+    <script src="app.js"></script>
 </body>
 </html>
