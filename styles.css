@@ -382,6 +382,13 @@ body {
     padding: 0 var(--space-lg);
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+
+.top-nav__brand {
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--color-text-primary);
 }
 
 .top-nav__links {
@@ -451,18 +458,110 @@ body {
     min-height: calc(100vh - 200px);
 }
 
-.page-placeholder {
+/* ============================================
+   LANDING PAGE
+   ============================================ */
+
+.landing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.landing__headline {
+    font-family: var(--font-serif);
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: var(--space-md);
+    letter-spacing: -1px;
+    color: var(--color-text-primary);
+}
+
+.landing__subtext {
+    font-size: 20px;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: var(--space-xl);
+    max-width: 600px;
+}
+
+.landing__cta {
+    padding: var(--space-md) var(--space-lg);
+    font-size: 16px;
+    font-weight: 500;
+    background-color: var(--color-accent);
+    color: var(--color-surface);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color var(--transition);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.landing__cta:hover {
+    background-color: #6D0000;
+}
+
+/* ============================================
+   SETTINGS PAGE
+   ============================================ */
+
+.settings {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.settings__header {
+    margin-bottom: var(--space-xl);
+}
+
+.settings__title {
+    font-family: var(--font-serif);
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: var(--space-sm);
+    letter-spacing: -0.5px;
+}
+
+.settings__subtitle {
+    font-size: 18px;
+    color: #666666;
+    line-height: 1.5;
+}
+
+.settings__form {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: var(--space-lg);
+}
+
+/* ============================================
+   EMPTY STATE
+   ============================================ */
+
+.empty-state {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 400px;
     text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.page-placeholder__title {
+.empty-state__title {
     font-family: var(--font-serif);
-    font-size: 48px;
+    font-size: 36px;
     font-weight: 600;
     line-height: 1.2;
     margin-bottom: var(--space-sm);
@@ -470,10 +569,52 @@ body {
     color: var(--color-text-primary);
 }
 
-.page-placeholder__subtitle {
+.empty-state__text {
+    font-size: 18px;
+    color: #666666;
+    line-height: 1.6;
+}
+
+/* ============================================
+   PROOF PAGE
+   ============================================ */
+
+.proof {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.proof__header {
+    margin-bottom: var(--space-xl);
+}
+
+.proof__title {
+    font-family: var(--font-serif);
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: var(--space-sm);
+    letter-spacing: -0.5px;
+}
+
+.proof__subtitle {
     font-size: 18px;
     color: #666666;
     line-height: 1.5;
+}
+
+.proof__placeholder {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: var(--space-xl);
+    text-align: center;
+}
+
+.proof__placeholder-text {
+    font-size: 16px;
+    color: #999999;
+    line-height: 1.6;
 }
 
 /* ============================================
@@ -523,7 +664,20 @@ body {
         padding: var(--space-lg) var(--space-sm);
     }
     
-    .page-placeholder__title {
+    .landing__headline {
+        font-size: 42px;
+    }
+    
+    .landing__subtext {
+        font-size: 18px;
+    }
+    
+    .settings__title,
+    .proof__title {
         font-size: 36px;
+    }
+    
+    .empty-state__title {
+        font-size: 28px;
     }
 }
